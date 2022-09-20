@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-banner-template",
+      "settings": {
+        "wide_display": true,
+        "mobile_image_crop": "none",
+        "caption_content_background": "original",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "text_position": "center",
+        "text_align": "center",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

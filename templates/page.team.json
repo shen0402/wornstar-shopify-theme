@@ -1,0 +1,54 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-team-template",
+      "blocks": {
+        "block-1": {
+          "type": "employee",
+          "settings": {
+            "title": "Jamie Ipsum",
+            "job_title": "Fancy job title",
+            "description": "<p>Powered by cats and coffee.<\/p>",
+            "twitter": "Shopify"
+          }
+        },
+        "block-2": {
+          "type": "employee",
+          "settings": {
+            "title": "Jamie Ipsum",
+            "job_title": "Fancy job title",
+            "description": "<p>Powered by cats and coffee.<\/p>",
+            "twitter": "Shopify"
+          }
+        },
+        "block-3": {
+          "type": "employee",
+          "settings": {
+            "title": "Jamie Ipsum",
+            "job_title": "Fancy job title",
+            "description": "<p>Powered by cats and coffee.<\/p>",
+            "twitter": "Shopify"
+          }
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3"
+      ],
+      "settings": {
+        "image_position": "left",
+        "title": "Meet the team",
+        "text": "<p>Say a little something about your team here, tell the story of how you got together, describe what roles people play, and help your customers get to know you better! All your staff members can be listed below, with their respective photos, job titles, descriptions or mini-bios, and Twitter handles.<\/p>",
+        "text_position": "center",
+        "employee_per_row": 3,
+        "member_color": "#fff",
+        "member_accent_color": "#d54d4d",
+        "member_overlay_color": "#000"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

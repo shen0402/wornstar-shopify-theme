@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "404-template",
+      "settings": {}
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "newsletter"
+  ]
+}

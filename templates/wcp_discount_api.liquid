@@ -1,0 +1,77 @@
+{% layout none %}
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+
+{%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last |
+   replace:'\/','/' | 
+   replace:'%20',' ' | 
+   replace:'\u0026','&'
+-%}
+
+{% assign handles = pageUrl | split: 'handle=' | last %}
+
+{% assign h_array = handles | split: ',' %}
+
+{% capture output %}
+{
+	"products":
+        [
+            {% for handler in h_array %}
+
+{% assign item = all_products[handler] %}
+
+			   {% include 'wcp_discount' with item %} 				
+                {
+					                   
+				    "id"  : "{{item.id}}"
+                    ,"handle":"{{ item.handle }}"			
+
+                    ,"price_min":"{{item.price_min | money_without_currency}}" 
+					,"price_max":"{{item.price_max | money_without_currency }}" 
+
+					,"wpd_price_min":"{{ wcp_price_min | money_without_currency }}" 
+                    ,"wpd_price_max":"{{ wcp_price_max | money_without_currency}}" 
+
+					,"wpd_compare_at_price_min":"{{ wcp_compare_at_price_min | money_without_currency}}"                    
+					,"wpd_compare_at_price_max":"{{ wcp_compare_at_price_max | money_without_currency}}"                    
+
+					,"compare_at_price_min":"{{ item.compare_at_price_min | money_without_currency}}"                    
+					,"compare_at_price_max":"{{ item.compare_at_price_max | money_without_currency }}"   
+
+					,"variants":[
+						{% for varnts in item.variants %}
+							{ 
+								{% include 'wcp_variant' with varnts %}
+
+								"id":"{{varnts.id}}"                                 
+								,"product_id":"{{item.id}}"
+
+								,"price":"{{ varnts.price | money_without_currency}}"
+								{% if compare_at_price == blank %}
+									,"compare_at_price":"0"
+								{% else %}
+									,"compare_at_price":"{{ varnts.compare_at_price | money_without_currency }}"
+								{% endif %}								
+								{% if wcp_v_compare_at_price == blank %}
+									,"wpd_compare_at_price":"0"	
+								{% else %}
+									,"wpd_compare_at_price":"{{wcp_v_compare_at_price | money_without_currency }}"
+								{% endif %}
+								,"wpd_price":"{{ wcp_v_price | money_without_currency}}"								
+								,"IsIndividualPrice":false
+
+                                
+							}
+						{% unless forloop.last %},{% endunless %}
+						{% endfor %}
+
+					]
+                }
+				{% unless forloop.last %},{% endunless %}
+               
+            {% endfor %}
+
+        ]
+
+}
+{% endcapture %}
+{{- output | strip_newlines -}}

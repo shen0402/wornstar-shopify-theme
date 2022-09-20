@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "main": {
+      "type": "collection-template",
+      "settings": {
+        "featured_collection_image": true,
+        "wide_display": true,
+        "mobile_image_crop": "none",
+        "caption_content_background": "original",
+        "display_collection_title": false,
+        "collection_breadcrumb": true,
+        "collection_tags": false,
+        "collection_sort": true,
+        "products_per_row": 3,
+        "pagination_limit": 48,
+        "toggle": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

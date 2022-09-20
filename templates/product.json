@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "sidebar": {
+      "type": "product-sidebar",
+      "settings": {
+        "toggle": false
+      }
+    },
+    "main": {
+      "type": "product-template",
+      "blocks": {
+        "b34d3df6-5cc3-4eb9-9258-01eb480e4101": {
+          "type": "title",
+          "settings": {}
+        },
+        "05c672af-8ef9-439b-92f1-762e748c24be": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "17ba2f11-5899-48cf-9fde-f68a819abb1e": {
+          "type": "price",
+          "settings": {
+            "display_savings": true
+          }
+        },
+        "07e4b91d-a9f9-419c-947b-7188878e4d37": {
+          "type": "form",
+          "settings": {}
+        },
+        "07bbd2a4-898f-437a-9f44-c0641c039a5e": {
+          "type": "description",
+          "settings": {}
+        },
+        "6995551b-2a5c-4dbb-9a43-24eeef233206": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b34d3df6-5cc3-4eb9-9258-01eb480e4101",
+        "05c672af-8ef9-439b-92f1-762e748c24be",
+        "17ba2f11-5899-48cf-9fde-f68a819abb1e",
+        "07e4b91d-a9f9-419c-947b-7188878e4d37",
+        "07bbd2a4-898f-437a-9f44-c0641c039a5e",
+        "6995551b-2a5c-4dbb-9a43-24eeef233206"
+      ],
+      "settings": {
+        "product_breadcrumb": true,
+        "media_position": "is-flex-row",
+        "set_product_height": false,
+        "product_height": 500,
+        "video_looping": false,
+        "product_thumbs": true,
+        "gallery_arrows": true,
+        "enable_product_lightbox": true,
+        "activate_zoom": false,
+        "slideshow_speed": 6,
+        "slideshow_animation": "slide",
+        "thumbnail_position": "bottom",
+        "enable_thumbnail_slider": false
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": false,
+        "wide_display": false,
+        "product_recommendations_style": "grid",
+        "product_recommendations_heading": "You may also like",
+        "products_per_row": 4,
+        "recommended_products_limit": 4
+      }
+    },
+    "1663289168e7953170": {
+      "type": "recently-viewed",
+      "settings": {
+        "rv_title": "Recently viewed products",
+        "rv_max_display": 4,
+        "rv_per": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "sidebar",
+    "main",
+    "recommendations",
+    "1663289168e7953170"
+  ]
+}

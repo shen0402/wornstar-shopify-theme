@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "main": {
+      "type": "article-template",
+      "settings": {
+        "featured_image": "none",
+        "wide_display": true,
+        "mobile_image_crop": "none",
+        "caption_content_background": "original",
+        "blog_breadcrumb": true,
+        "blog_pagination": true,
+        "blog_tags": false,
+        "blog_byline": false,
+        "read_time": true,
+        "blog_date": true,
+        "blog_author": false,
+        "display_social_buttons": true,
+        "blog_comment_count": false,
+        "blog_additional_posts": true,
+        "read_more_link": true,
+        "toggle": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

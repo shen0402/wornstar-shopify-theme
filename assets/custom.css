@@ -1,0 +1,94 @@
+div.content, section.content {
+    padding-top: 15px;
+}
+
+.payment-terms-container {
+    display: none;
+}
+
+.smart-payment-button--false .purchase-details, .is-product-sidebar.content {
+    padding: 0;
+}
+
+.size_chart {
+    float: right;
+}
+
+.swatch .swatch-element {
+    border-radius: 3px;
+}
+
+.swatch label {
+    min-width: 40px;
+    opacity: 0.6;
+    height: 40px;
+    line-height: 20px;
+}
+
+.swatch .option_title {
+    text-transform: uppercase;
+}
+
+.header .wk-link {
+    padding: 0 1px!important;
+    margin-left: 0;
+}
+
+.header .wk-link span {
+    color: #fff;
+}
+
+a.wk-link {
+    display: flex !important;
+    vertical-align: middle;
+    text-transform: uppercase;
+    margin-left: 5px;
+    margin-right: 5px;
+    vertical-align: middle;
+    color: #f4f4f4;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family: Oswald,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: -25px;
+}
+
+.header a.wk-link .wk-icon {
+    margin-top: -5px;
+}
+
+.nav-desktop:nth-child(2) {
+    margin-top: 1px;
+    margin-left: 10px;
+}
+
+:hover>button.wk-button-collection {
+    top: 12px;
+    left: 10px;
+}
+
+.thumbnail-overlay .price {
+    color: #03a196;
+}
+
+.modal .modal_price, .modal_price {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.product_name, .price-ui-badges {
+    margin-bottom: 0;
+}
+
+.additional-checkout-buttons {
+    display: none;
+}
+
+.subtotal label {
+    text-transform: uppercase;
+}
+
+#product-form-installment {
+    margin-bottom: 0;
+}

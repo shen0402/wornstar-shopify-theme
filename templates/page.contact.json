@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "main": {
+      "type": "contact-template",
+      "settings": {
+        "wide_display": true,
+        "mobile_image_crop": "none",
+        "contact_heading": "Get in touch",
+        "contact_subheading": "Subheading",
+        "caption_content_background": "original",
+        "contact_text": "",
+        "show_map": false,
+        "map_wide_display": true,
+        "map_address": "",
+        "map_height": 400,
+        "zoom_level": 16,
+        "api_key": "",
+        "show_pin": true,
+        "map_style": "default"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

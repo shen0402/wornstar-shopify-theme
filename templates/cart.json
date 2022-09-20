@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "cart-template",
+      "settings": {
+        "display_special_instructions": true,
+        "display_savings": false,
+        "cart_message": "",
+        "continue_shopping_url": ""
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

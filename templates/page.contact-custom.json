@@ -1,0 +1,56 @@
+{
+  "sections": {
+    "main": {
+      "type": "contact-custom-template",
+      "blocks": {
+        "block-1": {
+          "type": "richtext",
+          "settings": {
+            "label": "",
+            "placeholder": "Name",
+            "required": true,
+            "field_type": "text"
+          }
+        },
+        "block-2": {
+          "type": "richtext",
+          "settings": {
+            "label": "",
+            "placeholder": "Email",
+            "required": true,
+            "field_type": "email"
+          }
+        },
+        "block-3": {
+          "type": "richtext",
+          "settings": {
+            "label": "",
+            "placeholder": "Message",
+            "required": true,
+            "field_type": "textarea"
+          }
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3"
+      ],
+      "settings": {
+        "wide_display": true,
+        "mobile_image_crop": "none",
+        "contact_heading": "Get in touch",
+        "subtitle": "Subheading",
+        "caption_content_background": "original",
+        "contact_subheading": "Contact Us Today!",
+        "contact_content": "<p>Customize your contact form to suit your business! Add custom fields like a dropdown menu, checkbox, text fields and more, so that you can gather pertinent info from shoppers right from the get-go, to help answer their inquiries more effectively.<\/p>",
+        "contact_text_position": "left",
+        "contact_text_alignment": "left",
+        "contact_social_buttons": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

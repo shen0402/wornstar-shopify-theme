@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "main": {
+      "type": "blog-template",
+      "settings": {
+        "wide_display": true,
+        "image": "shopify:\/\/shop_images\/driverwilliams-0414-01b.jpg",
+        "mobile_image_crop": "none",
+        "subtitle": "",
+        "caption_content_background": "original",
+        "blog_posts_per_row": 3,
+        "blog_posts_per_page": 30,
+        "blog_tags": false,
+        "blog_author": false,
+        "read_time": true,
+        "blog_date": true,
+        "blog_comment_count": false,
+        "read_more_link": false,
+        "excerpt_display": "full_excerpt",
+        "toggle": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

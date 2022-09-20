@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-narrow-template",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "search-template",
+      "settings": {}
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "newsletter"
+  ]
+}

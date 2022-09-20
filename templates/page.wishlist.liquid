@@ -1,0 +1,22 @@
+{{ 'option_selection.js' | shopify_asset_url | script_tag }}
+
+<a name="pagecontent" id="pagecontent"></a>
+
+<div class="sixteen columns page clearfix" style="width:calc(80% + 20px); margin: auto;">
+  <h1 id="wk-page-title" style="
+    margin-top: 3%;
+">
+    {{ page.title }}
+  </h1>
+  <div class="feature_divider"></div>
+
+  <div>
+    {% include 'page-multi-column', content: page.content %}
+    <div id="wishlist-king" class="wk-row">
+      <div class="wk-span12">
+        <!-- include 'wishlist-collection' -->
+      </div>
+    </div>
+  </div>
+
+</div>
