@@ -92,3 +92,7 @@ a.wk-link {
 #product-form-installment {
     margin-bottom: 0;
 }
+
+.product-details span.money {
+    color: #03a196!important;
+}
