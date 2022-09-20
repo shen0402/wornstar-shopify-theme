@@ -96,3 +96,22 @@ a.wk-link {
 .product-details span.money {
     color: #03a196!important;
 }
+
+.shopify-installments{
+    font-size: 12px;
+}
+
+.sticky_nav{
+    height: 53px;
+}
+
+.sticky_nav .main-nav{
+    height: 100%!important;
+    overflow: hidden;
+}
+
+.price-ui-badge__sticker{
+    font-weight: 300;
+    font-size: 15px;
+    padding: 8px 12px;
+}
