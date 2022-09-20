@@ -115,3 +115,25 @@ a.wk-link {
     font-size: 15px;
     padding: 8px 12px;
 }
+
+.shopify-installments__content, shopify-payment-terms{
+    font-size: 12px!important;
+}
+
+.subtotal label{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+label.tos_label{
+    font-weight: normal;
+    text-transform: unset!important;
+}
+
+b, strong{
+    font-weight: bold!important;
+}
+
+#custom-cart-text {
+    font-size: 14px;
+}
