@@ -137,3 +137,42 @@ b, strong{
 #custom-cart-text {
     font-size: 14px;
 }
+
+.mw-options-container label {
+    display: initial;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    color: rgb(51, 51, 51);
+    cursor: default;
+    display: inline;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: bold;
+    height: auto;
+    line-height: 24px;
+    margin-bottom: 5px;
+    text-align: left;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    visibility: visible;
+    width: auto;
+}
+
+.mw-options-container label .option-label-value {
+    font-weight: normal;
+}
+
+.button-value-container .button-value {
+    padding: 6px 15px;
+    background-size: cover;
+    cursor: pointer;
+    border: #e2e2e2 1px solid!important;
+    border-radius: 3px;
+    box-shadow: 0 0 0 2px #fff;
+    min-width: 40px;
+    min-height: 40px;
+    font-weight: 700;
+    font-size: 13px;
+}
