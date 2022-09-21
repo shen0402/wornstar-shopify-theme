@@ -172,3 +172,7 @@ b, strong{
     font-weight: 700;
     font-size: 13px;
 }
+
+.cart__item {
+    align-items: flex-start;
+}

@@ -372,10 +372,7 @@
                           <div class="mini-cart__item-price">
                             {% if item.price > 0 %}
                               <span class="money {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}sale{% endif %}">
-                                {%
-                                  render 'price-element',
-                                  price: item.final_price
-                                %}
+                                {% include 'mw_PO_cart' with item, code: 'price' %}
                               </span>
 
                               {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}
