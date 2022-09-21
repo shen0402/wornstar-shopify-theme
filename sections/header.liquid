@@ -326,7 +326,7 @@
                         {%- assign total_saving = saving | plus: total_saving -%}
                       {% endif %}
 
-                      <li class="mini-cart__item {% include 'mw_PO_cart', code: 'class' %}" data-cart-item data-line-id="{{ forloop.index }}" data-variant-id="{{ item.id }}">
+                      <li class="mini-cart__item clearfix {% include 'mw_PO_cart', code: 'class' %}" data-cart-item data-line-id="{{ forloop.index }}" data-variant-id="{{ item.id }}" {% include 'mw_PO_cart' with item, code: 'style' %}>
                         {% include 'mw_PO_cart' with item, code: 'relation' %}
                         <a href="{{ item.url }}">
                           {% if item.image %}
@@ -340,33 +340,33 @@
                           <div class="mini-cart__item-title">
                             <a href="{{ item.url }}">
                               {{ item.product.title }}
-                            </a>
-                            {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %}
-                              -
-                              {% for option in item.product.options %}
-                                {{ item.variant.options[forloop.index0] }} {% unless forloop.last %}/{% endunless %}
-                              {% endfor %}
-                            {% endunless %}
+                              {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %}
+                                -
+                                {% for option in item.product.options %}
+                                  {{ item.variant.options[forloop.index0] }} {% unless forloop.last %}/{% endunless %}
+                                {% endfor %}
+                              {% endunless %}
 
-                            {% comment %}
+                              {% comment %}
 
-                            {% if item.selling_plan_allocation.selling_plan %}
-                              <p class="meta">{{ item.selling_plan_allocation.selling_plan.name }}</p>
-                            {% endif %}
+                              {% if item.selling_plan_allocation.selling_plan %}
+                                <p class="meta">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                              {% endif %}
 
-                            {% if item.properties %}
-                              {% for p in item.properties %}
-                                {% if p.last != blank %}
-                                  <div class="line-item">
-                                    {{ p.first }}: {{ p.last }}
-                                  </div>
-                                {% endif %}
-                              {% endfor %}
-                            {% endif %}
-                            {% endcomment %}
-                            {% if item.properties %}
-                              {% include 'mw_PO_cart' with item, code: 'properties' %}
-                            {% endif %}
+                              {% if item.properties %}
+                                {% for p in item.properties %}
+                                  {% if p.last != blank %}
+                                    <div class="line-item">
+                                      {{ p.first }}: {{ p.last }}
+                                    </div>
+                                  {% endif %}
+                                {% endfor %}
+                              {% endif %}
+                              {% endcomment %}
+                              {% if item.properties %}
+                                {% include 'mw_PO_cart' with item, code: 'properties' %}
+                              {% endif %}
+                              </a>
                           </div>
 
                           <div class="mini-cart__item-price">
