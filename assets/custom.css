@@ -176,3 +176,9 @@ b, strong{
 .cart__item {
     align-items: flex-start;
 }
+
+@media (max-width: 768px) {
+    .flickity-page-dots {
+        display: none;
+    }
+}
