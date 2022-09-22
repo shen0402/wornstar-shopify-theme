@@ -304,10 +304,9 @@
     <div class="section-wrapper">
       {{ content_for_layout }}
     </div>
-    {% unless template contains 'index' or settings.secondary_newsletter_banner == false %}
-      
-    {% endunless %}
-    {% section 'newsletter' %}
+    {% if settings.secondary_newsletter_banner == true %}
+      {% section 'newsletter' %}
+    {% endif %}
 
     {% section 'footer' %}
 
