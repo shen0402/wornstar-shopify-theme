@@ -18,7 +18,7 @@
                 {
 
                     "id"  : "{{item.id}}"
-                    ,"price_varies":{{item.price_varies}}
+                    ,"price_varies":{{item.price_varies | json}}
                     ,"handle":"{{ item.handle }}"
                     ,"default_variant_id":"{{item.selected_or_first_available_variant.id}}"
                     ,"price_min":"{{item.price_min | money_without_currency}}"

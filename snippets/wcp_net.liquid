@@ -396,7 +396,38 @@
     grid-gap: 10px;
   }
   
-  
+  .wpd-loader-wrapper {
+    display: none;
+    position: absolute;
+    left: 50%;
+  }
+  .wpd-show-loader-spinner {
+    display: block !important;
+    border: 4px solid black;
+    border-top-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: wpdLoadingSpinner 0.7s infinite linear;
+    -webkit-animation: wpdLoadingSpinner 0.7s infinite linear;
+    position: relative;
+    left: -50%;
+  }
+  .wpd-button-loading .wpd-loader-wrapper {
+    display: block !important;
+  }
+  .wpd-button-loading .wpd-button-text {
+    opacity: 0;
+  }
+  @keyframes wpdLoadingSpinner {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+  @-webkit-keyframes wpdLoadingSpinner {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+  }
 </style>
   <div id='wcp-wcpModal-container' style='display:none;' class='wcp-wrap wcp-hero-wcpModal'>
   <h3 style="font-weight:bold;font-size:22px;">{{shop.metafields.wcp_net.netConfMsg}}</h3>
@@ -623,7 +654,10 @@ function billingAddressManager()
     </div>
       
     </div>
-          <button id="wpd-net-place-order" type="submit">Place Order</button>
+          <button id="wpd-net-place-order" type="submit">
+          <div class="wpd-loader-wrapper"><div class="wpd-show-loader-spinner"></div></div>                
+          <span class="wpd-button-text"><span class="wpd-loader-button-label">Place Order</span></span>  
+          </button>
     </form>
   	
  </div>    

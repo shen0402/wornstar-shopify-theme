@@ -67,6 +67,17 @@ reqJquery(function($){
 	{% assign is_wcp_wholesale_customer = false %}
 	{% assign active_discounts = shop.metafields.wcp_active_discounts.wcp_active_discounts %}
 	{% assign active_discounts_array = active_discounts | split: ',' %}
+
+    {% assign customer_tags = blank %}
+    {% for tag in customer.tags %}
+      {% assign tempTag = tag | downcase %}
+      {% assign customer_tags = customer_tags | prepend:tempTag %}
+      {% unless forloop.last %}
+        {% assign customer_tags = customer_tags | prepend:','  %}
+      {% endunless %}
+    {% endfor %}
+    {% assign customer_tags = customer_tags | split:',' %}
+  
 	{% if shop.metafields.wcp_status.wcp_status != 'disabled' and customer %}
       {% for discount_key in active_discounts_array %}
           {% assign key_split = discount_key | split: '-' %}
@@ -77,35 +88,40 @@ reqJquery(function($){
           {% else %}
               {% assign wcp_hide_sale_badge_customer_tag = key_split[0] %}      
           {% endif %}
-          {% if customer.tags contains wcp_hide_sale_badge_customer_tag %}
+          {% assign wcp_hide_sale_badge_customer_tag = wcp_hide_sale_badge_customer_tag | downcase %}
+          {% if customer_tags contains wcp_hide_sale_badge_customer_tag %}
               {% assign is_wcp_wholesale_customer = true %}     
           {% endif %}
       {% endfor %}
 	{% endif %}
     {% if is_wcp_wholesale_customer == true %}  
-     $('body').on('click', ".wcp_checkout_btn,#dvPaypal, #dvAmazon, input[name='checkout'], button[name='checkout'], [href$='checkout'], input[name='goto_pp'], button[name='goto_pp'], input[name='goto_gc'], button[name='goto_gc'], .additional-checkout-button, .google-wallet-button-holder, .amazon-payments-pay-button", function(ev){    
-        if(window.wcp_data.discounted_hash.discount_value || window.wcp_data.discounted_hash.shipping || window.wcp_data.discounted_hash.formatted_original_total != window.wcp_data.discounted_hash.formatted_wcp_total){
-          if(window.wpd_prevent_checkout != undefined && window.wpd_prevent_checkout == true){return false;}
-          ev.preventDefault();
-          wcpolesaleCheckout();
-        }else{
-           window.location = '/checkout';
-        }
-      });  
+        $('body').on('click', ".wcp_checkout_btn,#dvPaypal, #dvAmazon, input[name='checkout'], button[name='checkout'], [href$='checkout'], input[name='goto_pp'], button[name='goto_pp'], input[name='goto_gc'], button[name='goto_gc'], .additional-checkout-button, .google-wallet-button-holder, .amazon-payments-pay-button", function(ev){    
+            if(window.wpd_bypass_checkout != true) {
+                if(window.wcp_data.discounted_hash.discount_value || window.wcp_data.discounted_hash.shipping || window.wcp_data.discounted_hash.formatted_original_total != window.wcp_data.discounted_hash.formatted_wcp_total){
+                    if(window.wpd_prevent_checkout != undefined && window.wpd_prevent_checkout == true){return false;}
+                    ev.preventDefault();
+                    wcpolesaleCheckout();
+                }else{
+                    window.location = '/checkout';
+                }
+            }
+        });
   {% else %}  
-  $('body').on('click', ".wcp_checkout_btn,#dvPaypal, #dvAmazon, input[name='checkout'], button[name='checkout'], [href$='checkout'], input[name='goto_pp'], button[name='goto_pp'], input[name='goto_gc'], button[name='goto_gc'], .additional-checkout-button, .google-wallet-button-holder, .amazon-payments-pay-button", function(ev){        
-      if(window.wcp_data.discounted_hash.discount_value || window.wcp_data.discounted_hash.shipping || window.wcp_data.discounted_hash.formatted_original_total != window.wcp_data.discounted_hash.formatted_wcp_total ){
-         if(window.wpd_prevent_checkout != undefined && window.wpd_prevent_checkout == true){return false;}        
-         if(window.wcp_data != undefined && window.wcp_data.hasOwnProperty("discounted_hash") && window.wcp_data.discounted_hash.show_discount_code == true && window.wcp_data.discounted_hash.ApplyDiscountCode == true){
-         	ev.preventDefault();
-		    wcpolesaleCheckout();
-          }else{
-        	   window.location = '/checkout';
-          }          
-        }else{
-           window.location = '/checkout';
-        }
-      });  
+        $('body').on('click', ".wcp_checkout_btn,#dvPaypal, #dvAmazon, input[name='checkout'], button[name='checkout'], [href$='checkout'], input[name='goto_pp'], button[name='goto_pp'], input[name='goto_gc'], button[name='goto_gc'], .additional-checkout-button, .google-wallet-button-holder, .amazon-payments-pay-button", function(ev){        
+            if(window.wpd_bypass_checkout != true) {
+                if(window.wcp_data.discounted_hash.discount_value || window.wcp_data.discounted_hash.shipping || window.wcp_data.discounted_hash.formatted_original_total != window.wcp_data.discounted_hash.formatted_wcp_total ){
+                    if(window.wpd_prevent_checkout != undefined && window.wpd_prevent_checkout == true){return false;}        
+                    if(window.wcp_data != undefined && window.wcp_data.hasOwnProperty("discounted_hash") && window.wcp_data.discounted_hash.show_discount_code == true && window.wcp_data.discounted_hash.ApplyDiscountCode == true){
+                        ev.preventDefault();
+                        wcpolesaleCheckout();
+                    }else{
+                        window.location = '/checkout';
+                    }          
+                }else{
+                    window.location = '/checkout';
+                }
+            } 
+        });  
   {% endif %}
   function wcpolesaleCheckout(){
     if(window.location.host == "tungstenandtool.com"){
@@ -212,11 +228,16 @@ reqJquery(function($){
                   if(window.is_wcp_custom_param != undefined &&  window.is_wcp_custom_param ==true){
     				        orderRedirectUrl = orderRedirectUrl += "?" + window.wcp_cusome_invoiceUrlParams.join("&");
     		          }
-              }              
+              }
+              if(window.wpd_checkout_redirect_delay==undefined || isNaN(window.wpd_checkout_redirect_delay)){
+                window.wpd_checkout_redirect_delay=500;
+              }else{
+                window.wpd_checkout_redirect_delay=window.wpd_checkout_redirect_delay < 500 ? 500 : window.wpd_checkout_redirect_delay;                
+              }
               setTimeout(function(){
                 wcpClearCart();
                 window.location.href = orderRedirectUrl;                     
-              }, 500);
+              },window.wpd_checkout_redirect_delay);
             } else {
               wcpClearCart();
               window.location.href = "/checkout";               
@@ -277,8 +298,8 @@ reqJquery(function($){
          $(".wpd_net_shipping_amount").html(data.currency + data.ShippingCharges.price);
          $(".wpd_net_shipping_msg").html(data.ShippingCharges.title);              
          TempNetOrderPrice=parseFloat(data.wcp_total)+parseFloat(data.ShippingCharges.price);
-         TempNetOrderPrice=data.currency + TempNetOrderPrice
-         
+         TempNetOrderPrice = TempNetOrderPrice.toFixed(2);
+         TempNetOrderPrice=data.currency + TempNetOrderPrice;
         
        }
       
@@ -570,9 +591,11 @@ var fnCalled = false;
     }
 //     ensureStock();
     $('body').on('change', "input[name='updates[]'], input[id^='updates_'], input[id^='Updates_']", function(e) {
-   	  e.preventDefault();  
-       ensureStock();
-       setTimeout(function(){$("form[action$='cart']").submit();},500);      
+       if(window.wpd_bypass_quantity_reload != true) {
+          e.preventDefault();  
+          ensureStock();
+          setTimeout(function(){$("form[action$='cart']").submit();},500);   
+       }   
     });
     
     $('[max]').change(function() {
@@ -739,9 +762,11 @@ var fnCalled = false;
                 alert("You have entered an invalid email address!");
     			return false;
                
-    	    }          
-          note=note+ '\\r\\n\\r\\n Billing Email:  '+$('.wcpbillingEmail').val();
-          note_data['Billing_Email']=$('.wcpbillingEmail').val();
+    	    }
+          if(window.wpdNetremoveAttributes == undefined || !window.wpdNetremoveAttributes.includes('Billing_Email')){
+            note=note+ '\\r\\n\\r\\n Billing Email:  '+$('.wcpbillingEmail').val();
+            note_data['Billing_Email']=$('.wcpbillingEmail').val();
+          }
         }else{
           document.getElementById("wcpbillingEmail").focus();
           wcp_required=true;      
@@ -757,8 +782,10 @@ var fnCalled = false;
          document.getElementById("datepicker").style.borderColor = "red";
       	  wcp_required=true;        
       }else{
-         note=note +'\\r\\n\\r\\n Delivery Date: '+$('#datepicker').val();
-         note_data['delivery_date']=$('#datepicker').val();
+        if(window.wpdNetremoveAttributes == undefined || !window.wpdNetremoveAttributes.includes('delivery_date')){
+           note=note +'\\r\\n\\r\\n Delivery Date: '+$('#datepicker').val();
+           note_data['delivery_date']=$('#datepicker').val();
+        }
       }
       {% endif %}
       {% if shop.metafields.wcp_net.isPayment == 'true' or  shop.metafields.wcp_net.isPayment == '1' %}
@@ -767,31 +794,39 @@ var fnCalled = false;
          document.getElementById("payment").focus();
          wcp_required=true;    
          document.getElementById("payment").style.borderColor = "red";
-      }else{
-        note=note +'\\r\\n\\r\\n Payment Option: '+$('#payment').val();
-        note_data['Payment_Option']=$('#payment').val();
+      }else{        
+        if(window.wpdNetremoveAttributes == undefined || !window.wpdNetremoveAttributes.includes('Payment_Option')){
+          note=note +'\\r\\n\\r\\n Payment Option: '+$('#payment').val();
+          note_data['Payment_Option']=$('#payment').val();
+        }
       }
       {% endif %}
       {% endif %}
       
       {% if shop.metafields.wcp_net.isdisplayPONo == 'true' or  shop.metafields.wcp_net.isdisplayPONo == '1' %}
         if($('.wcpPONo').val()!=''){
+          if(window.wpdNetremoveAttributes == undefined || !window.wpdNetremoveAttributes.includes('Purchase_Order_Number')){
            note=note+ '\\r\\n\\r\\n Purchase Order Number: '+$('.wcpPONo').val();
            note_data['Purchase_Order_Number']=$('.wcpPONo').val();
+          }
         }
       {% endif %}
 
       {% if shop.metafields.wcp_net.isdisplayUPSNo == 'true' or  shop.metafields.wcp_net.isdisplayUPSNo == '1' %}
         if($('.wcpUPSNo').val()!=''){
+         if(window.wpdNetremoveAttributes == undefined || !window.wpdNetremoveAttributes.includes('UPS_Shipping_Account_Number')){
           note=note+ '\\r\\n\\r\\n UPS Shipping Account Number: '+$('.wcpUPSNo').val();
           note_data['UPS_Shipping_Account_Number']=$('.wcpUPSNo').val();
+         }
         }
       {% endif %}
 
       {% if shop.metafields.wcp_net.isdisplayShippingInst == 'true' or  shop.metafields.wcp_net.isdisplayShippingInst == '1' %}
         if($('.wcpShippingInst').val()!=''){
+         if(window.wpdNetremoveAttributes == undefined || !window.wpdNetremoveAttributes.includes('Shipping_Instructions')){
           note=note+ '\\r\\n\\r\\n Shipping Instructions:  '+$('.wcpShippingInst').val();
           note_data['Shipping_Instructions']=$('.wcpShippingInst').val();
+         }
         }
       {% endif %}
       
@@ -801,10 +836,12 @@ var fnCalled = false;
         return false;
       }
       
-     
-      
       note=note+ExtraFields;
-      window.wcp_data.wcp_cart.note=note;
+      if(window.wpdNetExtraFields != undefined){
+          note = note+window.wpdNetExtraFields;
+          note_data['Extra_Fields']=window.wpdNetExtraFields;
+      }
+      window.wcp_data.wcp_cart.note=note;      
       window.wcp_data.note_data=note_data; 
       
       var address = {};
@@ -847,7 +884,7 @@ var fnCalled = false;
       $("#net-order-form-billing :input").prop("disabled", true);
       $("#net-order-form-billing :button").prop("disabled", true);      
       $("#wpd-net-place-order").prop("disabled", true);
-     
+      $("#wpd-net-place-order").addClass("wpd-button-loading");
      setTimeout(function(){
        submitNet30(window.wcp_data); 
       }, 1000);       

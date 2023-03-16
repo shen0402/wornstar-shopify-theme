@@ -11,7 +11,19 @@
 {%- assign wcp_price_min = wcp_discount.price_min -%}
 {%- assign wcp_price_max = wcp_discount.price_max -%}
 {%- assign wcp_price = wcp_discount.price -%}
-
+    
+{% assign customer_tags = blank %}
+{% for tag in customer.tags %}
+  {% assign tempTag = tag | downcase %}
+  {% assign customer_tags = customer_tags | prepend:tempTag %}
+  {% unless forloop.last %}
+    {% assign customer_tags = customer_tags | prepend:','  %}
+  {% endunless %}
+{% endfor %}
+{% assign customer_tags = customer_tags | split:',' %}
+    
+{%- assign active_discounts = active_discounts | downcase -%}
+{%- assign active_discounts_tag_array = blank -%}
 
 {%- if shop.metafields.wcp_status.wcp_status != 'disabled' and customer -%}
   {%- assign p_discount_value = 0 -%}
@@ -26,7 +38,9 @@
       {%- assign p_key = key_split[0] -%}
       {%- assign p_value = key_split[1] | plus: 0 -%}
     {%- endif -%}
-    {%- if customer.tags contains p_key -%}
+    {%- assign p_key = p_key | downcase -%}  
+    {%- assign active_discounts_tag_array = active_discounts_tag_array | prepend:',' | prepend:p_key -%}   
+    {%- if customer_tags contains p_key -%}
       {%- assign discount_type = shop.metafields.wcp_discountgroup[discount_key] -%}
       {%- if discount_type contains 'entire' -%}
         {%- if p_value >= p_discount_value -%}
@@ -52,7 +66,9 @@
       {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
-  {%- if customer.tags contains p_discount_tag -%}
+  {% assign active_discounts_tag_array = active_discounts_tag_array | split:',' %}
+  {%- assign p_discount_tag = p_discount_tag | downcase -%}
+  {%- if customer_tags contains p_discount_tag -%}
     {%- assign wcp_customer_tag = p_discount_tag -%}
     {%- assign wcp_discount_value = p_discount_value | divided_by: 100.0 -%}
   {%- endif -%}
@@ -62,16 +78,17 @@
 
 {%- capture wcp_variants_json -%}[
 {%- assign wcp_price_min = wcp_product_json.price_max -%}
-{%- assign temp_set_price = 99999999999999999999999999999 -%}
 {%- for variant in wcp_product_json.variants -%}
+{%- assign temp_set_price = 99999999999999999999999999999 -%}
       {%- if raw_set_prices -%}
       {%- assign set_prices_array = raw_set_prices | split: "," -%}
       {%- for sp in set_prices_array -%}
         {%- assign sp_arr = sp | split: '--' -%}
         {%- assign sp_tag = sp_arr | first -%}
+        {%- assign sp_tag = sp_tag | downcase -%}
         {%- assign sp_var_arr = sp_arr | last | split: '^' -%}
-        {%- if active_discounts contains sp_tag -%}
-          {%- if customer.tags contains sp_tag -%}  
+        {%- if active_discounts_tag_array contains sp_tag -%}
+          {%- if customer_tags contains sp_tag -%}  
             {%- for value in sp_var_arr -%}
               {%- assign val_split = value | split: '-' -%}
               {%- assign variant_id = val_split | first | times: 1 -%}
@@ -121,6 +138,7 @@
       {%- for sp in set_prices_array -%}
         {%- assign sp_arr = sp | split: '--' -%}
         {%- assign sp_tag = sp_arr | first -%}
+        {%- assign sp_tag = sp_tag | downcase -%}
         {%- if v_discount_tag == sp_tag -%}
           {%- assign sp_var_arr = sp_arr | last | split: '^' -%}
           {%- for value in sp_var_arr -%}

@@ -6,75 +6,295 @@
         "block-1": {
           "type": "heading",
           "settings": {
-            "heading": "Section"
+            "heading": "SHIPPING AND RETURNS"
           }
         },
         "block-2": {
           "type": "Content",
           "settings": {
-            "title": "Title",
-            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
+            "title": "What is your return policy?",
+            "subtitle": "<p>Please refer to the <a href=\"https:\/\/wornstar.com\/pages\/return-policy\">return policy<\/a>.<\/p>"
+          }
+        },
+        "8a77d85a-627b-4359-9a9e-2035b24ffd63": {
+          "type": "Content",
+          "settings": {
+            "title": "How long will it take for my order to ship?",
+            "subtitle": "<p>• Unaltered in stock items ship within 1-2 business days.<br\/>• In stock pants with an inseam alteration take up to 10 days to ship.<br\/>• In stock items with add-ons take up to 2-4 weeks to ship.<br\/>• In stock shirts with sleeveless alterations take take up to 10 days to ship.<br\/>• Print on demand dresses and leggings take 2-4 weeks to ship.<br\/>• Longer lead times may be necessary during high demand times.<\/p>"
           }
         },
         "block-3": {
           "type": "Content",
           "settings": {
-            "title": "Title",
-            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
+            "title": "Do you ship outside of the U.S.?",
+            "subtitle": "<p>Yes, on the checkout page there is a pulldown menu to determine shipping costs to your country.<\/p>"
           }
         },
         "block-4": {
           "type": "Content",
           "settings": {
-            "title": "Title",
-            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
+            "title": "Can my order be picked up?",
+            "subtitle": "<p>Yes, customers can pick up their order from our showroom in Lake In The Hills, IL, USA for orders placed on <a href=\"http:\/\/www.wornstar.com\">www.wornstar.com<\/a>.<\/p>"
           }
         },
         "block-5": {
           "type": "heading",
           "settings": {
-            "heading": "Section"
+            "heading": "PAYMENT"
           }
         },
         "block-6": {
           "type": "Content",
           "settings": {
-            "title": "Title",
-            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
+            "title": "What methods of payment do you accept?",
+            "subtitle": "<p>Wornstar Clothing accepts Visa, Mastercard, Discover, AMEX, Amazon Pay, Apple Pay, Google Pay, Shop Pay, and PayPal.<\/p>"
           }
         },
         "block-7": {
           "type": "Content",
           "settings": {
-            "title": "Title",
-            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
+            "title": "Do you accept Paypal?",
+            "subtitle": "<p>Yes.<\/p>"
           }
         },
         "block-8": {
           "type": "Content",
           "settings": {
-            "title": "Title",
-            "subtitle": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
+            "title": "Do you accept orders over the phone?",
+            "subtitle": "<p>No.<\/p>"
+          }
+        },
+        "0bd03b0d-5c4d-424d-b74a-b12f19b9d59c": {
+          "type": "Content",
+          "settings": {
+            "title": "Do you offer layaway payment options?",
+            "subtitle": "<p>No.<\/p>"
+          }
+        },
+        "3e6c8900-64be-48cf-b31f-97380054fb17": {
+          "type": "Content",
+          "settings": {
+            "title": "What is Afterpay?",
+            "subtitle": "<p>Afterpay is a service that lets you get everything you want NOW and pay for it in four equal payments made every 2 weeks without any interest.<\/p><p>Visit the Afterpay website <a href=\"https:\/\/help.afterpay.com\/hc\/en-us\">here<\/a> for a list of FAQs and check out Afterpay’s Privacy Policy found <a href=\"https:\/\/www.afterpay.com\/privacy-policy\">here.<\/a> If you have a question about your Afterpay account, please contact the Afterpay customer support line at 855-289-6014 or use the contact form found <a href=\"https:\/\/help.afterpay.com\/hc\/en-us\/requests\/new\">here.<\/a><\/p>"
+          }
+        },
+        "b275a5c4-2605-4101-bfe6-ba452c33e111": {
+          "type": "heading",
+          "settings": {
+            "heading": "SIZING"
+          }
+        },
+        "0d23e24c-1fb0-4f65-83e4-5289899ad245": {
+          "type": "Content",
+          "settings": {
+            "title": "What size should I order?",
+            "subtitle": "<p>• Refer to the sizing chart on each product page<br\/>• The sizing chart for tops is a chest measurement in inches<br\/>• The sizing chart for pants is a waist measurement<br\/>• All measurements are based on the garment laying on a flat surface<\/p>"
+          }
+        },
+        "a485e920-c2f1-47e9-a105-08b027fdff00": {
+          "type": "heading",
+          "settings": {
+            "heading": "GARMENT CARE"
+          }
+        },
+        "abcf9b1d-3917-40ce-a0ec-7566baeb4d61": {
+          "type": "Content",
+          "settings": {
+            "title": "How do I wash my custom item?",
+            "subtitle": "<p>Please spot clean whenever possible. For best results please hand wash your garment in cold water and hang to dry. You may also wash in a washing machine in cold water inside out in mild detergent and on gentle cycle. Lay flat or hang to dry. Due to the hand dye process the colors may bleed so it’s best to wash the item separately from your other clothing. Do not bleach. Specific to Alloy Wash™, Frosted Suede Wash™, Smoke Wash™: The wash process is a stain and any mid to heavy detergent or detergent with stain removal will reduce and\/or remove the wash from the pants.<\/p><p>The Custom Stage Wear washing instructions apply to designs that have been customized from our Custom Add Ons section <br\/>excluding inseam alterations to Street Wear\/Stage Wear(non-custom) bottoms and sleeveless variations on Street Wear tops.<\/p><p>*Wornstar Clothing is not responsible for any design being damaged, deteriorating or losing the effect of applied customization due to incorrect washing.<\/p>"
+          }
+        },
+        "fc326002-024c-4343-b8b1-934095e5b5e7": {
+          "type": "Content",
+          "settings": {
+            "title": "How do I wash my tees, hoodies, shirts?",
+            "subtitle": "<p>Wash cold water inside out in mild detergent and on gentle cycle. Hang dry or in dryer on low heat.<\/p><p>*Wornstar Clothing is not responsible for any design being damaged, deteriorating or losing the effect of applied customization due to incorrect washing.<\/p>"
+          }
+        },
+        "e76474e5-8981-413a-8202-0385f89a3d13": {
+          "type": "Content",
+          "settings": {
+            "title": "How do I wash my denim?",
+            "subtitle": "<p>For Wornstar Essentials and All Access Denim:<\/p><p>Wash cold water inside out in mild detergent and on gentle cycle. Hang dry or in dryer on low heat.<\/p><p>*Wornstar Clothing is not responsible for any design being damaged, deteriorating or losing the effect of applied customization due to incorrect washing.<\/p>"
+          }
+        },
+        "da4f0f74-415a-4f43-9f0f-d8744494851e": {
+          "type": "Content",
+          "settings": {
+            "title": "How do I wash my waxed\/coated denim?",
+            "subtitle": "<p>For Wornstar Clothing Waxed\/Coated Denim:<\/p><p>Wash cold water inside out in mild detergent and on gentle cycle. Hang or air dryer only.<\/p><p>*Wornstar Clothing is not responsible for any design being damaged, deteriorating or losing the effect of applied customization due to incorrect washing.<\/p>"
+          }
+        },
+        "95f295fe-e902-49d6-bd01-4e28542bdb9a": {
+          "type": "heading",
+          "settings": {
+            "heading": "CUSTOM SHOP"
+          }
+        },
+        "63829ed6-c46e-4dfc-8ddc-835627e3e5de": {
+          "type": "Content",
+          "settings": {
+            "title": "What are the different custom items you offer in your web store Custom Shop section?",
+            "subtitle": "<p>• MTO = Made at Time of Order (go in a queue at time of order).<br\/>• RTS = Ready to ship (these are listed in the size we have with measurements as available, and only offered in the size listed).<br\/>• One of a kind = One of a kind items are just that, one of a kind. These are not recreated in other sizes. Once they are sold, they are sold.<\/p>"
+          }
+        },
+        "f2e40890-455f-4587-ba5e-d293a4260c8e": {
+          "type": "Content",
+          "settings": {
+            "title": "How long will it take for my order to ship?",
+            "subtitle": "<p>Custom orders on our website take on an average 4-6 weeks to ship, but it could be longer depending on availability of materials to produce the item and work load in the custom studio at time you place your order. If you have an important event and need your item rushed please contact us to make sure we can meet your date and what the rush fee would be for your item. All custom work must be pre-paid in full before any work is begun.<\/p>"
+          }
+        },
+        "ffa96095-91f4-4577-92eb-4bc355f1b1b3": {
+          "type": "Content",
+          "settings": {
+            "title": "Can you make items to my specs or with my provided elements such as patches or my logo\/graphics?",
+            "subtitle": "<p>If you’re looking to have something completely made from scratch or designed to your specs please email your request to <a href=\"mailto:customerservice@wornstar.com\">customerservice@wornstar.com<\/a>. Please provide details, reference photos and links, size needed, elements you’ll be providing, and completion date. We will respond with the answer after we review your request. These items can take a few weeks or several months to complete and will be quoted accordingly. All custom pieces require measurements from a professional tailor. The customer has to have all applicable rights and\/or licenses to use provided artwork.<\/p>"
+          }
+        },
+        "d93265ca-0794-4b79-8c00-22c9d9d4e4f1": {
+          "type": "Content",
+          "settings": {
+            "title": "Can you re-create the items in your Custom items gallery?",
+            "subtitle": "<p>Custom items pictured in the gallery are previously made items and not all can be re-created. Please email <a href=\"mailto:customerservice@wornstar.com\">customerservice@wornstar.com<\/a> if you have questions about a gallery item.<\/p>"
+          }
+        },
+        "8d16163e-273a-44aa-8e28-6354933b10b9": {
+          "type": "Content",
+          "settings": {
+            "title": "How soon will I hear from you after I submit a custom quote request?",
+            "subtitle": "<p>Custom quote requests will be reviewed within one week and please be patient with our responses, as we are a very small shop. Your custom job must be paid in full before it can go in the queue.<\/p>"
+          }
+        },
+        "c7a9784b-7cb0-49b7-8503-ea051d3573f3": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "CUSTOM ADD ONS"
+          }
+        },
+        "d4c6a69c-ea2c-4f32-9403-fa2b4b59137d": {
+          "type": "Content",
+          "disabled": true,
+          "settings": {
+            "title": "What are Add Ons?",
+            "subtitle": "<p>Add Ons are design elements or alterations that can be added to a piece of clothing.<\/p>"
+          }
+        },
+        "3b5f7a1f-0a80-49d9-ae03-0f5a8033a56c": {
+          "type": "Content",
+          "disabled": true,
+          "settings": {
+            "title": "Can all pants be lengthened to a 36 or 38 inseam?",
+            "subtitle": "<p>No, Street Wear and Stage Wear designs using the Side Laced pants can  only be made up to a 34 inseam. The exception to this is with the leather side lace Add On. Designs with that Add On can be made with a longer inseam. <\/p>"
+          }
+        },
+        "39e62ec5-402f-41d0-b7c7-16de7cbf90a4": {
+          "type": "Content",
+          "disabled": true,
+          "settings": {
+            "title": "Can I send in my own garment to have Add Ons added to it?",
+            "subtitle": "<p>Yes, but prior to sending in a garment for an Add On, please contact <a href=\"mailto:customerservice@wornstar.com\">customerservice@wornstar.com<\/a> with a photo and material type for approval.<\/p>"
+          }
+        },
+        "afd8cbbf-bebd-4fa8-b643-cffb45fed5d0": {
+          "type": "Content",
+          "disabled": true,
+          "settings": {
+            "title": "Can I purchase an Add On on its own to use?",
+            "subtitle": "<p>No, Add Ons are exclusive to our shop and are not available for individual purchase.<\/p>"
+          }
+        },
+        "be2b1362-309c-47aa-b3bf-998b1ada24f9": {
+          "type": "Content",
+          "disabled": true,
+          "settings": {
+            "title": "How long does it take to ship an order with Add Ons?",
+            "subtitle": "<p>Add Ons are considered Custom Stage Wear and take 2-4 weeks to make prior to shipping.<\/p>"
+          }
+        },
+        "9006aa9c-fda6-410c-97cb-0d070ffc39fc": {
+          "type": "Content",
+          "disabled": true,
+          "settings": {
+            "title": "Can an order with Add Ons be returned?",
+            "subtitle": "<p>Refer to the <a href=\"https:\/\/wornstar.com\/pages\/return-policy\">Return Policy<\/a>.<\/p>"
+          }
+        },
+        "614e4d1c-fb2d-4901-bb88-77b98c471ae5": {
+          "type": "Content",
+          "disabled": true,
+          "settings": {
+            "title": "Can I use the Alloy Wash Add On for Jackets and Vests?",
+            "subtitle": "<p>Yes, the Alloy Wash Add On can be used for the Jackets and Vests.<\/p>"
+          }
+        },
+        "6d0dace9-1512-45f7-b126-2deb64159d36": {
+          "type": "Content",
+          "disabled": true,
+          "settings": {
+            "title": "I’ve ordered multiple designs with different Add Ons?",
+            "subtitle": "<p>For orders with multiple designs including Add Ons, leave a note in the order notes box during checkout to make sure the correct Add On goes on the correct design. An email can be sent to <a href=\"mailto:customerservice@wornstar.com\">customerservice@wornstar.com<\/a> as well with the information.<\/p>"
+          }
+        },
+        "34547e16-b603-4b94-b708-2010e8ca1782": {
+          "type": "heading",
+          "settings": {
+            "heading": "ARTIST ENDORSEMENTS"
+          }
+        },
+        "03b75fc5-9146-43bd-b52b-d8b23b1d2da5": {
+          "type": "Content",
+          "settings": {
+            "title": "How do I get a Wornstar Clothing endorsement deal?",
+            "subtitle": "<p>Artists, athletes, and models seeking an endorsement deal or clothing for an event, please read all the way through below and e-mail us <a href=\"mailto:artistrelations@wornstar.com\">artistrelations@wornstar.com<\/a>. The artist, athlete, or model should contact us directly, not through a representative, manager, agent, record label, or girlfriend. All submissions must be done through this e-mail. No exceptions; not even if you know the owner, think you know the owner, think you have a friend that works here, know somebody famous, think you know somebody famous, etc.<\/p><p>Wornstar Clothing does not offer paid sponsorships and we do not give away free clothing. We offer discounts on our product. Discount depends on promotion potential from the artist through all social media, live shows, directly to friends and fans, as well as TV and video appearances, events, photos, etc. You must have scheduled live shows and be playing at least 80 shows per year and\/or have national TV appearances\/events scheduled. We get a large volume of requests and it may not be possible for us to respond to all of them, but we will review them all.<\/p><p>Please send us the following; All items on the list are required:<\/p><p>1. Name of your band and info about your band (members, ages, age of band, musical style)<br\/> 2. Current professional photos of your band wearing Wornstar Clothing (if you cannot complete this step, do not submit)<br\/> 3. A complete list of other brands that you endorse or that sponsor you<br\/> 4. Link(s) to original material and\/or videos<br\/> 5. A current tour schedule (artist should be playing live at least 80 dates per year)<br\/> 6. Social media presence list and links - Website, Facebook, Twitter, and others<br\/> 7. The first line of your email must include the password jellyfish in a sentence<br\/> 8. Let us know what value you will bring to our brand<\/p><p>Please be sure to provide ALL information above including your contact information if you'd like to be considered. Do not assume that we know who you are. We will not do research on your band. Please send us the information above via e-mail to <a href=\"mailto:artistrelations@wornstar.com\">artistrelations@wornstar.com<\/a>.<\/p><p>All ad, website, and promotional usage is at our discretion. We are a clothing company and not your management, promotions agency, your booking agent, or your publicist.<\/p><p>Athletes, media TV and radio, photographers, music fans, and any other person interested in a sponsorship please email a complete proposal to email address above. No request will be considered without a proposal. Thanks!<\/p><p>Artists, athletes and models who do not meet the criteria listed above may be suited and qualify for our affiliate endorsement program. Please email a complete proposal to the email address above with any applicable information from the endorsement submission criteria. <\/p>"
           }
         }
       },
       "block_order": [
         "block-1",
         "block-2",
+        "8a77d85a-627b-4359-9a9e-2035b24ffd63",
         "block-3",
         "block-4",
         "block-5",
         "block-6",
         "block-7",
-        "block-8"
+        "block-8",
+        "0bd03b0d-5c4d-424d-b74a-b12f19b9d59c",
+        "3e6c8900-64be-48cf-b31f-97380054fb17",
+        "b275a5c4-2605-4101-bfe6-ba452c33e111",
+        "0d23e24c-1fb0-4f65-83e4-5289899ad245",
+        "a485e920-c2f1-47e9-a105-08b027fdff00",
+        "abcf9b1d-3917-40ce-a0ec-7566baeb4d61",
+        "fc326002-024c-4343-b8b1-934095e5b5e7",
+        "e76474e5-8981-413a-8202-0385f89a3d13",
+        "da4f0f74-415a-4f43-9f0f-d8744494851e",
+        "95f295fe-e902-49d6-bd01-4e28542bdb9a",
+        "63829ed6-c46e-4dfc-8ddc-835627e3e5de",
+        "f2e40890-455f-4587-ba5e-d293a4260c8e",
+        "ffa96095-91f4-4577-92eb-4bc355f1b1b3",
+        "d93265ca-0794-4b79-8c00-22c9d9d4e4f1",
+        "8d16163e-273a-44aa-8e28-6354933b10b9",
+        "c7a9784b-7cb0-49b7-8503-ea051d3573f3",
+        "d4c6a69c-ea2c-4f32-9403-fa2b4b59137d",
+        "3b5f7a1f-0a80-49d9-ae03-0f5a8033a56c",
+        "39e62ec5-402f-41d0-b7c7-16de7cbf90a4",
+        "afd8cbbf-bebd-4fa8-b643-cffb45fed5d0",
+        "be2b1362-309c-47aa-b3bf-998b1ada24f9",
+        "9006aa9c-fda6-410c-97cb-0d070ffc39fc",
+        "614e4d1c-fb2d-4901-bb88-77b98c471ae5",
+        "6d0dace9-1512-45f7-b126-2deb64159d36",
+        "34547e16-b603-4b94-b708-2010e8ca1782",
+        "03b75fc5-9146-43bd-b52b-d8b23b1d2da5"
       ],
       "settings": {
-        "wide_display": true,
-        "show_banner": true,
+        "wide_display": false,
+        "show_banner": false,
         "mobile_image_crop": "none",
         "caption_content_background": "original",
         "pretext": "",
-        "title": "Page FAQ Template",
+        "title": "FAQ",
         "subtitle": "<p>Create an amazing FAQ page with a full-width banner<\/p>",
         "text_position": "center",
         "text_align": "center",

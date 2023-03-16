@@ -189,7 +189,9 @@
       {{ settings.custom_scripts }}
     </script>
 
-    {{ content_for_header }}
+    <script src="https://smarteucookiebanner.upsell-apps.com/gdpr_adapter.js?shop=wornstar.myshopify.com" type="application/javascript"></script>
+  {% capture 'header_content' %}{{ content_for_header }}{% endcapture %}{{ header_content | replace: "trekkie.load(", "(window.deferTrekkie || trekkie.load)(" }}
+
 
     {% render 'social-meta-info' %}
 

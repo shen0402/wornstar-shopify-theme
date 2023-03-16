@@ -61,6 +61,8 @@
 	  {% assign lineItemOriginalPrice = item.original_line_price | money %}
 	  {% assign lineItemRawPrice = wcp_line_price %}
 	  {% assign lineItemRawOriginalPrice = item.original_line_price %}
+      {% assign singlePrice = wcp_v_price | money %}  
+      {% assign singleCompareAtPrice = wcp_v_compare_at_price | money %}  
     	{
 		 	"original_item":{{item | json}},
 		  	"variant_id": {{item.variant_id}},
@@ -80,7 +82,9 @@
 			"lineItemRawPrice": {{ lineItemRawPrice | json }},
 			"lineItemRawOriginalPrice": {{ lineItemRawOriginalPrice | json }},
 			"title": {{ item.title | json }},
-			"image": {{ item.image | img_url: '300x' | json }}
+			"image": {{ item.image | img_url: '300x' | json }},
+        	"singlePrice": {{ singlePrice | json}},
+          	"singleCompareAtPrice": {{ singleCompareAtPrice | json }}
         }
 	 {% unless forloop.last%},{%endunless%}
       {% else %}
@@ -111,7 +115,9 @@
 			"lineItemRawPrice": {{ lineItemRawPrice | json }},
 			"lineItemRawOriginalPrice": {{ lineItemRawOriginalPrice | json }}
 			"title": {{ item.title | json }},
-			"image": {{ item.image | img_url: '300x' | json }}
+			"image": {{ item.image | img_url: '300x' | json }},
+            "singlePrice": {{ singlePrice | json}},
+          	"singleCompareAtPrice": {{ singleCompareAtPrice | json }}
         }
     	{% unless forloop.last%},{%endunless%}
      {% endif %}

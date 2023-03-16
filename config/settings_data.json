@@ -3053,7 +3053,7 @@
     "sub_footer_text_color": "#6b6b6b",
     "sale_color": "#d54d4d",
     "was_price_color": "#8c8b8b",
-    "product_hover_text_color": "#ffffff",
+    "product_hover_text_color": "#03a196",
     "promo_text_color": "#ffffff",
     "shop_home_page_content_text_color": "#363636",
     "newsletter_popup_color": "#363636",
@@ -3091,6 +3091,7 @@
     "divider_style": "solid",
     "sub_footer_border_color": "#1b1f23",
     "sale_banner_color": "#db0000",
+    "sold_out_banner_color": "#ff8a00",
     "new_banner_color": "#03a196",
     "search_section_color": "#000000",
     "search_section_bg_color": "#cccccc",
@@ -3207,7 +3208,7 @@
     "secondary_newsletter_banner": true,
     "newsletter_popup": true,
     "newsletter_popup_close": true,
-    "newsletter_popup_mobile": true,
+    "newsletter_popup_mobile": false,
     "newsletter_popup_form": true,
     "display_first_name": false,
     "display_last_name": false,
@@ -3295,7 +3296,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "promo_text": "",
+          "promo_text": "<p><a href=\"\/collections\/sale\" title=\"Sale\"><strong>We're moving sale!!! - Up to 75% Off<\/strong><\/a><\/p>",
           "social_icons_header": true,
           "phone_number": "",
           "top_bar_menu": "",
@@ -5493,6 +5494,245 @@
           "css_class": "",
           "custom_css": ""
         }
+      },
+      "page-details-template": {
+        "type": "page-details-template",
+        "blocks": {
+          "page-details-template-0": {
+            "type": "image_with_text_overlay",
+            "settings": {
+              "wide_display": true,
+              "pretext": "<p>Introducing Your<\/p>",
+              "title": "Page Details Template",
+              "subtitle": "<p>Let's Get Started!<\/p>",
+              "button1": "Button",
+              "button1_link": "",
+              "button1_style": "global-button--banner",
+              "button2": "",
+              "button2_link": "",
+              "button2_style": "global-button--banner",
+              "text_position": "center",
+              "text_align": "center",
+              "caption_content_background": "original",
+              "mobile_image_crop": "none",
+              "mobile_text_below_image": true,
+              "mobile_text_color": ""
+            }
+          },
+          "page-details-template-1": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 20,
+              "divider_border": false
+            }
+          },
+          "page-details-template-2": {
+            "type": "rich_text_and_image",
+            "settings": {
+              "title": "Talk about your brand",
+              "content": "<p>Use this text to share information about your brand with your customers.<\/p><p>Describe a product, share announcements, or welcome customers to your store.<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "text_size": "featured_text",
+              "text_alignment": "center"
+            }
+          },
+          "page-details-template-3": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 10,
+              "divider_border": false
+            }
+          },
+          "page-details-template-4": {
+            "type": "featured_collection",
+            "settings": {
+              "title": "Featured collection",
+              "collection_description": false,
+              "collection": "",
+              "collection_style": "grid",
+              "products_per": 4,
+              "products_limit": 8
+            }
+          },
+          "page-details-template-5": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 10,
+              "divider_border": false
+            }
+          },
+          "page-details-template-6": {
+            "type": "featured_video",
+            "settings": {
+              "wide_display": true,
+              "aspect_ratio": "16:9",
+              "autoplay": false,
+              "autoloop": true,
+              "mute_video": false,
+              "show_controls": true,
+              "video_dark_overlay": false,
+              "iframe_video": "",
+              "html5_video": "",
+              "display_text_over_video": false,
+              "preheading": "",
+              "heading": "Video Section",
+              "subheading": "",
+              "button1_label": "Play Video",
+              "button1_link": "",
+              "button1_style": "global-button--banner",
+              "button2_label": "",
+              "button2_link": "",
+              "button2_style": "global-button--banner",
+              "text_position": "center",
+              "text_align": "center",
+              "caption_content_background": "original",
+              "mobile_image_crop": "none",
+              "mobile_text_below_image": true,
+              "mobile_text_color": ""
+            }
+          },
+          "page-details-template-7": {
+            "type": "image_with_text",
+            "settings": {
+              "wide_display": false,
+              "frontpage_text_align": "left",
+              "frontpage_image_position": "row",
+              "image_crop": "none",
+              "title": "Your headline",
+              "text": "<p>Promotion description appears here.<\/p>",
+              "link": "",
+              "button_label": "View all"
+            }
+          },
+          "page-details-template-8": {
+            "type": "image_with_text",
+            "settings": {
+              "wide_display": false,
+              "frontpage_text_align": "left",
+              "frontpage_image_position": "row-reverse",
+              "image_crop": "none",
+              "title": "Your headline",
+              "text": "<p>Promotion description appears here.<\/p>",
+              "link": "",
+              "button_label": "View all"
+            }
+          },
+          "page-details-template-9": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 10,
+              "divider_border": false
+            }
+          },
+          "page-details-template-10": {
+            "type": "blog_posts",
+            "settings": {
+              "title": "Blog posts",
+              "blog_widget_select": "",
+              "home_page_articles": 3,
+              "blog_tags": false,
+              "blog_author": false,
+              "read_time": true,
+              "blog_date": true,
+              "blog_comment_count": true,
+              "read_more_link": true,
+              "excerpt_display": "full_excerpt"
+            }
+          },
+          "page-details-template-11": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 10,
+              "divider_border": false
+            }
+          },
+          "page-details-template-12": {
+            "type": "contact_form",
+            "settings": {
+              "contact_heading": "Get in touch",
+              "contact_subheading": "Leave a message",
+              "contact_content": "<p>Use this text to include important information that you'd like your customers to be aware of when contacting you. You could include shop hours, email response times, other ways to contact you, or just some friendly text to encourage your customers to reach out.<\/p>",
+              "contact_text_position": "left",
+              "contact_text_alignment": "left"
+            }
+          },
+          "page-details-template-13": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 10,
+              "divider_border": false
+            }
+          },
+          "page-details-template-14": {
+            "type": "map",
+            "settings": {
+              "map_wide_display": true,
+              "map_address": "",
+              "map_height": 400,
+              "zoom_level": 16,
+              "api_key": "",
+              "show_pin": true,
+              "map_style": "default"
+            }
+          },
+          "page-details-template-15": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 20,
+              "divider_border": false
+            }
+          },
+          "page-details-template-16": {
+            "type": "image_gallery",
+            "settings": {
+              "wide_display": true
+            }
+          },
+          "page-details-template-17": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 20,
+              "divider_border": false
+            }
+          },
+          "page-details-template-18": {
+            "type": "quote",
+            "settings": {
+              "page_quote": "<p><i>40% of online shoppers abandon a site that takes more than 3 seconds to load<\/i><\/p>"
+            }
+          },
+          "page-details-template-19": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 20,
+              "divider_border": false
+            }
+          }
+        },
+        "block_order": [
+          "page-details-template-0",
+          "page-details-template-1",
+          "page-details-template-2",
+          "page-details-template-3",
+          "page-details-template-4",
+          "page-details-template-5",
+          "page-details-template-6",
+          "page-details-template-7",
+          "page-details-template-8",
+          "page-details-template-9",
+          "page-details-template-10",
+          "page-details-template-11",
+          "page-details-template-12",
+          "page-details-template-13",
+          "page-details-template-14",
+          "page-details-template-15",
+          "page-details-template-16",
+          "page-details-template-17",
+          "page-details-template-18",
+          "page-details-template-19"
+        ],
+        "settings": {}
       }
     },
     "content_for_index": [
